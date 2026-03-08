@@ -106,8 +106,13 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                <div className={`bg-secondary rounded-xl p-8 flex items-center justify-center min-h-[250px] ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <svc.icon className="h-32 w-32 text-primary/20" />
+                <div className={`rounded-xl overflow-hidden ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                  <img
+                    src={serviceImages[i]}
+                    alt={svc.title}
+                    className="w-full h-[280px] object-cover rounded-xl"
+                    loading="lazy"
+                  />
                 </div>
               </motion.div>
             ))}

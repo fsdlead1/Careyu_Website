@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { solutions } from "@/data/solutions";
+import heroWarehouse from "@/assets/hero-warehouse.jpg";
+import ecommerceImg from "@/assets/solution-ecommerce.jpg";
+import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+import coldstorageImg from "@/assets/solution-coldstorage.jpg";
+
+const solutionImages: Record<string, string> = {
+  "warehouse-automation": heroWarehouse,
+  "e-commerce-fulfillment": ecommerceImg,
+  "manufacturing-automation": manufacturingImg,
+  "cold-storage-automation": coldstorageImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
