@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { getProduct } from "@/data/products";
+import vlmImg from "@/assets/product-vlm.jpg";
+import ptlImg from "@/assets/product-ptl.jpg";
+import conveyorImg from "@/assets/product-conveyor.jpg";
+import robotsImg from "@/assets/product-robots.jpg";
+
+const productImages: Record<string, string> = {
+  "vertical-lift-module": vlmImg,
+  "pick-to-light": ptlImg,
+  "conveyor-systems": conveyorImg,
+  "warehouse-robots": robotsImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
