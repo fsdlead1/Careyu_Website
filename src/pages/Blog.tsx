@@ -57,7 +57,6 @@ const Blog = () => {
               <div className="overflow-hidden min-h-[300px]">
                 <img src={blogImages[blogPosts[0].image]} alt={blogPosts[0].title} className="w-full h-full object-cover" />
               </div>
-              </div>
               <div className="p-8 flex flex-col justify-center">
                 <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide rounded px-2 py-1 mb-3 w-fit">{blogPosts[0].category}</span>
                 <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">{blogPosts[0].title}</h2>
