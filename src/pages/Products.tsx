@@ -21,9 +21,17 @@ const productImages: Record<string, string> = {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
-const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+};
+const fadeInRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+};
+const stagger = { visible: { transition: { staggerChildren: 0.1 } } };
 
 const iconMap: Record<string, React.ElementType> = {
   Boxes,
@@ -44,10 +52,13 @@ const Products = () => {
       />
 
       {/* Hero */}
-      <section className="section-padding bg-navy">
-        <div className="container mx-auto text-center">
+      <section className="section-padding bg-navy relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-primary blur-3xl" />
+        </div>
+        <div className="container mx-auto text-center relative z-10">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.p variants={fadeInUp} className="text-sm uppercase tracking-[0.3em] text-navy-foreground/60 font-semibold mb-2">Our Products</motion.p>
+            <motion.p variants={fadeInUp} className="text-sm uppercase tracking-[0.3em] text-navy-foreground/60 font-semibold mb-3">Our Products</motion.p>
             <motion.h1 variants={fadeInUp} className="font-heading text-4xl md:text-6xl font-bold text-navy-foreground mb-4">
               Automation Products & Systems
             </motion.h1>
@@ -58,49 +69,59 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="section-padding bg-background">
+      {/* Products */}
+      <section className="bg-background">
         <div className="container mx-auto">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-12">
-            {products.map((product, i) => {
-              const Icon = iconMap[product.icon] || Boxes;
-              return (
-                <motion.div
-                  key={product.slug}
-                  variants={fadeInUp}
-                  className="grid md:grid-cols-2 gap-8 items-center"
-                >
-                  <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                    <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="h-7 w-7 text-primary" />
+          {products.map((product, i) => {
+            const Icon = iconMap[product.icon] || Boxes;
+            const isEven = i % 2 === 0;
+            return (
+              <motion.div
+                key={product.slug}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center section-padding ${i > 0 ? "border-t border-border" : ""}`}
+              >
+                <motion.div variants={isEven ? fadeInLeft : fadeInRight} className={!isEven ? "lg:order-2" : ""}>
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Icon className="h-5 w-5 text-primary" />
                     </div>
-                    <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">{product.title}</h2>
-                    <p className="text-muted-foreground leading-relaxed mb-4">{product.description}</p>
-                    <div className="grid grid-cols-2 gap-2 mb-6">
-                      {product.features.slice(0, 6).map((f) => (
-                        <p key={f} className="text-sm text-foreground flex items-start gap-1.5">
-                          <span className="text-primary mt-1">•</span> {f}
-                        </p>
-                      ))}
-                    </div>
-                    <Button asChild className="font-heading font-semibold uppercase tracking-wide">
-                      <Link to={`/products/${product.slug}`}>
-                        View Details <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    <span className="text-xs font-semibold uppercase tracking-widest text-primary">Product {String(i + 1).padStart(2, '0')}</span>
                   </div>
-                  <div className={`rounded-xl overflow-hidden ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                  <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight">{product.title}</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
+                  <div className="grid grid-cols-2 gap-2 mb-8">
+                    {product.features.slice(0, 6).map((f) => (
+                      <p key={f} className="text-sm text-foreground flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> {f}
+                      </p>
+                    ))}
+                  </div>
+                  <Button asChild size="lg" className="font-heading font-semibold uppercase tracking-wide">
+                    <Link to={`/products/${product.slug}`}>
+                      View Details <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </motion.div>
+                <motion.div variants={isEven ? fadeInRight : fadeInLeft} className={`relative group ${!isEven ? "lg:order-1" : ""}`}>
+                  <div className="overflow-hidden rounded-2xl">
                     <img
                       src={productImages[product.slug]}
                       alt={product.title}
-                      className="w-full h-[300px] object-cover rounded-xl"
+                      className="w-full h-[350px] lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                     />
                   </div>
+                  <div className="absolute -bottom-3 -left-3 bg-card rounded-xl p-3 border border-border shadow-lg hidden md:block">
+                    <div className="text-xs text-muted-foreground uppercase tracking-wide">Starting from</div>
+                    <div className="font-heading font-bold text-primary text-lg">Custom Quote</div>
+                  </div>
                 </motion.div>
-              );
-            })}
-          </motion.div>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
@@ -108,15 +129,15 @@ const Products = () => {
       <section className="section-padding bg-primary">
         <div className="container mx-auto text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
-            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground mb-4">
               Need Help Choosing the Right System?
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
+            <motion.p variants={fadeInUp} className="text-primary-foreground/80 max-w-xl mx-auto mb-8 text-lg">
               Our experts will assess your needs and recommend the best automation solution for your operations.
             </motion.p>
             <motion.div variants={fadeInUp}>
-              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/contact">Get Expert Advice</Link>
+              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-12 px-8">
+                <Link to="/contact">Get Expert Advice <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </motion.div>
           </motion.div>
