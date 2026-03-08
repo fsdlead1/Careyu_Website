@@ -5,6 +5,11 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import servicesHero from "@/assets/services-hero.jpg";
+import asrsImg from "@/assets/asrs-product.jpg";
+import heroWarehouse from "@/assets/hero-warehouse.jpg";
+import businessImg from "@/assets/service-business.jpg";
+
+const serviceImages = [asrsImg, heroWarehouse, businessImg];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
