@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogPosts";
+import asrsImg from "@/assets/asrs-product.jpg";
+import warehouseImg from "@/assets/hero-warehouse.jpg";
+import ptlImg from "@/assets/product-ptl.jpg";
+import servicesImg from "@/assets/services-hero.jpg";
+import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+
+const blogImages: Record<string, string> = {
+  asrs: asrsImg,
+  warehouse: warehouseImg,
+  picktolight: ptlImg,
+  storage: servicesImg,
+  industry: manufacturingImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
