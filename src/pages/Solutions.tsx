@@ -90,6 +90,9 @@ const Solutions = () => {
                   </div>
 
                   <div className={`space-y-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <motion.div variants={fadeInUp}>
+                      <img src={solutionImages[sol.slug]} alt={sol.title} className="w-full h-[200px] object-cover rounded-xl" loading="lazy" />
+                    </motion.div>
                     <motion.div variants={fadeInUp} className="bg-card rounded-xl p-6 border border-border">
                       <h4 className="font-heading font-bold text-foreground mb-3 text-sm uppercase tracking-wide">How We Help</h4>
                       <ul className="space-y-2">
