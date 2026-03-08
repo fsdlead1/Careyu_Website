@@ -54,11 +54,9 @@ const Blog = () => {
           {/* Featured post */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16">
             <div className="grid md:grid-cols-2 gap-8 bg-card rounded-xl border border-border overflow-hidden">
-              <div className="bg-primary/5 flex items-center justify-center p-12 min-h-[300px]">
-                <div className="text-center">
-                  <div className="font-heading text-6xl font-bold text-primary/20 mb-2">ASRS</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Featured Article</div>
-                </div>
+              <div className="overflow-hidden min-h-[300px]">
+                <img src={blogImages[blogPosts[0].image]} alt={blogPosts[0].title} className="w-full h-full object-cover" />
+              </div>
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide rounded px-2 py-1 mb-3 w-fit">{blogPosts[0].category}</span>
