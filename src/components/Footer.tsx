@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="bg-navy text-navy-foreground">
       <div className="container mx-auto section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="lg:col-span-2 space-y-4">
             <img src={logo} alt="CareYu Automation" className="h-12 w-auto brightness-0 invert" />
             <p className="text-sm text-navy-foreground/70 leading-relaxed">
               Precision and Performance through Automation. Transforming storage systems with pioneering automation solutions.
@@ -17,19 +17,17 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg font-bold mb-4 uppercase tracking-wide">Quick Links</h4>
+            <h4 className="font-heading text-lg font-bold mb-4 uppercase tracking-wide">Company</h4>
             <ul className="space-y-2">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About Us" },
-                { to: "/services", label: "Services" },
+                { to: "/blog", label: "Blog" },
+                { to: "/careers", label: "Careers" },
                 { to: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-navy-foreground/70 hover:text-primary transition-colors"
-                  >
+                  <Link to={link.to} className="text-sm text-navy-foreground/70 hover:text-primary transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -37,15 +35,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Products & Solutions */}
           <div>
-            <h4 className="font-heading text-lg font-bold mb-4 uppercase tracking-wide">Our Solutions</h4>
-            <ul className="space-y-2 text-sm text-navy-foreground/70">
-              <li>ASRS Systems</li>
-              <li>Storage Automation</li>
-              <li>Warehouse Management</li>
-              <li>Pick-to-Light Systems</li>
-              <li>Industrial Automation</li>
+            <h4 className="font-heading text-lg font-bold mb-4 uppercase tracking-wide">Solutions</h4>
+            <ul className="space-y-2">
+              {[
+                { to: "/products/asrs", label: "ASRS Systems" },
+                { to: "/products", label: "All Products" },
+                { to: "/solutions", label: "Solutions" },
+                { to: "/services", label: "Services" },
+              ].map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className="text-sm text-navy-foreground/70 hover:text-primary transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
