@@ -86,7 +86,7 @@ Unlike traditional AGVs that follow fixed paths, AMRs use AI and machine learnin
 
 ## 2. Digital Twin Technology
 
-Digital twins create virtual replicas of physical warehouses, allowing operators to simulate changes, test new layouts, and optimize operations before implementing them in the real world. This reduces risk and accelerates improvement cycles.
+Digital twins create virtual replicas of physical warehouses, allowing operators to simulate changes, test new layouts, and optimize operations before implementing them in the real world.
 
 ## 3. Collaborative Robotics (Cobots)
 
@@ -94,19 +94,19 @@ Cobots work alongside human workers, handling repetitive tasks like picking, pac
 
 ## 4. Micro-Fulfillment Centers
 
-Located in urban areas, these small, highly automated facilities bring inventory closer to customers. ASRS technology is at the heart of micro-fulfillment, enabling rapid order processing in compact spaces.
+Located in urban areas, these small, highly automated facilities bring inventory closer to customers. ASRS technology is at the heart of micro-fulfillment.
 
 ## 5. Sustainable Automation
 
-Energy-efficient systems, regenerative drives, and solar-powered warehouses are becoming standard. Companies are choosing automation solutions that reduce their carbon footprint alongside improving efficiency.
+Energy-efficient systems, regenerative drives, and solar-powered warehouses are becoming standard.
 
 ## 6. Cloud-Based WMS
 
-Cloud warehouse management systems offer real-time visibility, scalability, and integration capabilities that on-premise solutions struggle to match. They enable multi-site management and advanced analytics.
+Cloud warehouse management systems offer real-time visibility, scalability, and integration capabilities.
 
 ## 7. Pick-to-Light & Voice-Directed Picking
 
-These technologies continue to evolve, with AR (Augmented Reality) integration enabling even faster and more accurate picking operations. Workers receive visual or audio instructions, reducing training time and errors.
+These technologies continue to evolve, with AR integration enabling even faster and more accurate picking operations.
 
 ## Preparing for the Future
 
@@ -123,7 +123,7 @@ At CareYu Automation, we stay at the forefront of these trends, incorporating th
     excerpt: "Explore how Pick-to-Light technology uses LED-guided indicators to dramatically improve picking speed, accuracy, and worker productivity.",
     content: `## What is a Pick-to-Light System?
 
-Pick-to-Light (PTL) is an order fulfillment technology that uses light-directed indicators mounted on storage shelves or racks. When an order needs to be fulfilled, LEDs illuminate at the exact locations where items need to be picked, showing the quantity required.
+Pick-to-Light (PTL) is an order fulfillment technology that uses light-directed indicators mounted on storage shelves or racks. When an order needs to be fulfilled, LEDs illuminate at the exact locations where items need to be picked.
 
 ## How It Works
 
@@ -138,26 +138,14 @@ Pick-to-Light (PTL) is an order fulfillment technology that uses light-directed 
 ### Speed
 - **50-60% faster** picking compared to paper-based systems
 - Operators can process 300-500 picks per hour
-- No time wasted reading pick lists or searching for locations
 
 ### Accuracy
 - **99.9%+ picking accuracy**
 - Visual confirmation reduces human error
-- Built-in error detection alerts for wrong picks
 
 ### Training
 - New workers can be productive within **30 minutes**
-- Intuitive visual system requires minimal training
 - Language-independent operation
-
-### Flexibility
-- Easily reconfigurable for different product layouts
-- Supports multiple picking strategies (batch, zone, wave)
-- Scalable from small operations to large distribution centers
-
-## Integration with AR Navigation
-
-At CareYu, we combine PTL with our AR-based indoor navigation system. Workers wearing AR glasses receive turn-by-turn directions to the pick location, see the quantity to pick overlaid on their view, and confirm picks with voice commands.
 
 ## ROI Calculation
 
@@ -165,11 +153,8 @@ For a typical warehouse processing 5,000 picks per day:
 - **Labor savings**: 40-60% reduction in picking staff
 - **Error reduction**: From 1-3% error rate to <0.1%
 - **Payback period**: 12-18 months
-- **Throughput increase**: 50-100% improvement
 
-## Getting Started
-
-CareYu Automation designs and implements PTL systems tailored to your specific warehouse layout and operational needs. We handle everything from system design to installation and WMS integration.`,
+CareYu Automation designs and implements PTL systems tailored to your specific warehouse layout and operational needs.`,
     date: "2025-01-10",
     author: "CareYu Team",
     category: "Technology",
@@ -182,18 +167,18 @@ CareYu Automation designs and implements PTL systems tailored to your specific w
     excerpt: "Discover how proper storage rack design and floor layout optimization can maximize your warehouse space utilization and material handling efficiency.",
     content: `## The Importance of Storage Rack Design
 
-Your warehouse layout directly impacts operational efficiency, storage capacity, and labor productivity. A well-designed rack system can double your usable storage space while reducing material handling time.
+Your warehouse layout directly impacts operational efficiency, storage capacity, and labor productivity. A well-designed rack system can double your usable storage space.
 
 ## Key Design Principles
 
 ### 1. Vertical Space Utilization
-Most warehouses only use 40-50% of their vertical space. By implementing high-density racking systems, you can dramatically increase storage capacity without expanding your footprint.
+Most warehouses only use 40-50% of their vertical space. High-density racking systems can dramatically increase storage capacity.
 
 ### 2. Product Flow Analysis
-Understanding your inventory's movement patterns is crucial. Fast-moving items should be placed near shipping areas, while slow-movers can occupy higher or farther locations.
+Fast-moving items should be placed near shipping areas, while slow-movers can occupy higher or farther locations.
 
 ### 3. Aisle Width Optimization
-- **Wide aisles (3.5-4m)**: For standard forklifts, good for high-traffic areas
+- **Wide aisles (3.5-4m)**: For standard forklifts
 - **Narrow aisles (2.4-2.7m)**: For reach trucks, 30% more storage
 - **Very narrow aisles (1.5-1.8m)**: For turret trucks, 50% more storage
 
@@ -202,31 +187,12 @@ Understanding your inventory's movement patterns is crucial. Fast-moving items s
 - **Drive-in/Drive-through**: For high-volume, low-SKU operations
 - **Push-back Racking**: LIFO storage with high density
 - **Pallet Flow Racking**: FIFO storage using gravity
-- **Cantilever Racking**: For long or irregularly shaped items
-
-## The CareYu Design Process
-
-### Step 1: Space Assessment
-We survey your facility, measuring dimensions, identifying structural constraints, and understanding material flow requirements.
-
-### Step 2: Product Analysis
-We analyze your SKU profile, order patterns, throughput requirements, and growth projections.
-
-### Step 3: Layout Design
-Using advanced CAD tools, we create optimized floor plans that maximize space utilization while ensuring efficient material handling.
-
-### Step 4: Simulation
-We simulate operations in the proposed layout to verify throughput, identify bottlenecks, and optimize before implementation.
-
-### Step 5: Implementation
-Our team manufactures racks to specification and manages professional installation with minimal disruption to your operations.
 
 ## Results You Can Expect
 - 40-100% increase in storage capacity
 - 25-40% reduction in material handling time
 - Improved inventory visibility and accuracy
-- Safer working environment
-- Scalable design for future growth`,
+- Safer working environment`,
     date: "2024-12-20",
     author: "CareYu Team",
     category: "Storage Solutions",
@@ -236,24 +202,24 @@ Our team manufactures racks to specification and manages professional installati
   {
     slug: "industry-4-smart-manufacturing",
     title: "Industry 4.0: How Smart Manufacturing is Transforming Indian Factories",
-    excerpt: "Explore how Industry 4.0 technologies including IoT, AI, and automation are revolutionizing manufacturing in India and how to prepare your facility.",
+    excerpt: "Explore how Industry 4.0 technologies including IoT, AI, and automation are revolutionizing manufacturing in India.",
     content: `## What is Industry 4.0?
 
-Industry 4.0, or the Fourth Industrial Revolution, represents the integration of digital technologies into manufacturing. It encompasses IoT, AI, cloud computing, and advanced automation to create "smart factories."
+Industry 4.0 represents the integration of digital technologies into manufacturing. It encompasses IoT, AI, cloud computing, and advanced automation to create "smart factories."
 
 ## Key Technologies
 
 ### Internet of Things (IoT)
-Connected sensors on machines and products provide real-time data on performance, quality, and maintenance needs. This enables predictive maintenance and reduces downtime by up to 50%.
+Connected sensors on machines provide real-time data on performance, quality, and maintenance needs. This enables predictive maintenance and reduces downtime by up to 50%.
 
 ### Artificial Intelligence
-AI algorithms optimize production schedules, quality control, and supply chain management. Machine learning models can predict equipment failures before they occur.
+AI algorithms optimize production schedules, quality control, and supply chain management.
 
 ### Digital Twins
-Virtual replicas of physical manufacturing systems allow testing and optimization without disrupting production. Changes can be validated digitally before implementation.
+Virtual replicas of physical manufacturing systems allow testing and optimization without disrupting production.
 
 ### Robotics & Automation
-Advanced robots handle complex assembly, welding, painting, and material handling tasks with precision that exceeds human capability.
+Advanced robots handle complex assembly, welding, painting, and material handling tasks with precision.
 
 ## India's Industry 4.0 Journey
 
@@ -261,30 +227,254 @@ India's manufacturing sector is rapidly adopting Industry 4.0:
 - Government's "Make in India" initiative driving modernization
 - Growing domestic market demanding higher quality products
 - Competitive pressure from global manufacturers
-- Skilled workforce increasingly comfortable with technology
-
-## Implementation Roadmap
-
-### Phase 1: Assessment (1-2 months)
-Evaluate current operations, identify automation opportunities, and define ROI targets.
-
-### Phase 2: Foundation (3-6 months)
-Implement basic connectivity, sensors, and data collection systems. Establish a data infrastructure.
-
-### Phase 3: Optimization (6-12 months)
-Deploy analytics, implement automated quality control, and optimize production scheduling.
-
-### Phase 4: Advanced Automation (12-24 months)
-Integrate AI-driven decision-making, autonomous systems, and complete supply chain visibility.
 
 ## CareYu's Role
 
-CareYu Automation partners with manufacturers to implement Industry 4.0 solutions, from storage automation and ASRS to production line integration. We provide end-to-end solutions tailored to Indian manufacturing needs.`,
+CareYu Automation partners with manufacturers to implement Industry 4.0 solutions, from storage automation and ASRS to production line integration.`,
     date: "2024-12-05",
     author: "CareYu Team",
     category: "Industry 4.0",
     readTime: "6 min read",
     image: "industry",
+  },
+  {
+    slug: "amr-vs-agv-warehouse-robots",
+    title: "AMR vs AGV: Which Warehouse Robot Is Right for Your Business?",
+    excerpt: "A detailed comparison of Autonomous Mobile Robots (AMR) and Automated Guided Vehicles (AGV) to help you choose the right solution for your warehouse.",
+    content: `## Understanding the Difference
+
+Both AMRs and AGVs automate material transport, but they differ significantly in technology, flexibility, and cost.
+
+## AGV — Automated Guided Vehicles
+
+AGVs follow fixed paths using magnetic strips, wires, or painted lines on the floor. They're reliable, predictable, and well-suited for repetitive routes.
+
+### Advantages of AGVs:
+- Lower upfront cost
+- Highly reliable on fixed routes
+- Simple to program and maintain
+- Proven technology with decades of use
+
+### Limitations:
+- Cannot deviate from fixed paths
+- Infrastructure changes needed (floor wires, magnets)
+- Difficult to scale or reconfigure
+
+## AMR — Autonomous Mobile Robots
+
+AMRs use SLAM (Simultaneous Localization and Mapping), LiDAR, and AI to navigate dynamically without fixed infrastructure.
+
+### Advantages of AMRs:
+- No floor infrastructure needed
+- Dynamic path planning around obstacles
+- Easy to add more robots to scale
+- Adapts to layout changes automatically
+
+### Limitations:
+- Higher upfront cost per unit
+- More complex software to manage
+- Requires robust WiFi/5G infrastructure
+
+## When to Choose Each
+
+- **Choose AGV**: High-volume, fixed routes, budget-conscious operations
+- **Choose AMR**: Dynamic environments, frequent layout changes, rapid scaling needs
+
+## CareYu's Recommendation
+
+We offer both AGV and AMR solutions and will help you determine the right fit based on your facility layout, throughput requirements, and budget.`,
+    date: "2025-02-28",
+    author: "CareYu Team",
+    category: "Robotics",
+    readTime: "5 min read",
+    image: "warehouse",
+  },
+  {
+    slug: "conveyor-system-design-guide",
+    title: "The Ultimate Guide to Conveyor System Design for Modern Warehouses",
+    excerpt: "Learn the essentials of conveyor system design — from roller conveyors to high-speed sortation — and how to choose the right system for your facility.",
+    content: `## Why Conveyors Matter
+
+Conveyor systems are the arteries of any automated warehouse. They connect storage zones, picking stations, packing areas, and shipping docks into one seamless flow.
+
+## Types of Conveyor Systems
+
+### Belt Conveyors
+Best for lightweight, irregularly shaped items. Smooth, continuous surface ideal for polybags, envelopes, and small parcels.
+
+### Roller Conveyors
+Gravity-fed or motorized rollers for boxes, totes, and cartons. Most common in warehouse applications.
+
+### Sortation Conveyors
+High-speed divert systems that route items to specific lanes based on barcode or RFID scanning.
+
+### Spiral Conveyors
+Vertical conveyors for moving goods between mezzanine levels without an elevator or lift.
+
+## Design Considerations
+
+- **Throughput**: Calculate peak volumes, not just averages
+- **Item dimensions**: Size and weight determine conveyor type
+- **Integration points**: Where do items enter and exit?
+- **Accumulation zones**: Buffer areas prevent jams
+- **Safety**: Emergency stops, guards, and sensors
+
+## CareYu's Approach
+
+We design conveyor systems as part of the complete automation ecosystem — fully integrated with ASRS, pick stations, and WMS for end-to-end material flow optimization.`,
+    date: "2025-03-01",
+    author: "CareYu Team",
+    category: "Technology",
+    readTime: "6 min read",
+    image: "picktolight",
+  },
+  {
+    slug: "roi-warehouse-automation",
+    title: "Calculating ROI on Warehouse Automation: A Practical Framework",
+    excerpt: "A step-by-step framework for calculating the return on investment of warehouse automation projects, with real-world benchmarks and case studies.",
+    content: `## Why ROI Matters
+
+Warehouse automation is a significant capital investment. A clear ROI framework ensures you make data-driven decisions and set realistic expectations.
+
+## The ROI Framework
+
+### Step 1: Baseline Your Current Costs
+- Labor costs (wages, benefits, turnover, training)
+- Error costs (mis-picks, returns, customer complaints)
+- Space costs (rent, utilities per square meter)
+- Throughput constraints (orders per hour)
+
+### Step 2: Quantify Automation Benefits
+- **Labor savings**: Typically 40-70% reduction
+- **Space savings**: 50-85% with ASRS
+- **Error reduction**: From 1-3% to <0.1%
+- **Throughput increase**: 2-5x improvement
+
+### Step 3: Calculate Total Cost of Ownership
+- Equipment purchase/lease
+- Installation and integration
+- Software licensing
+- Ongoing maintenance
+- Energy consumption
+
+### Step 4: Determine Payback Period
+- Most ASRS projects: 2-4 year payback
+- Pick-to-Light: 12-18 months
+- Conveyor systems: 18-30 months
+- AMR/AGV: 18-36 months
+
+## Real-World Benchmarks
+
+- E-commerce warehouse (10,000 orders/day): 2.5 year payback
+- Cold storage facility: 3 year payback with energy savings
+- Manufacturing parts storage: 2 year payback
+
+## Get Your Custom ROI Analysis
+
+CareYu provides free ROI assessments for prospective clients. We analyze your operations and deliver a detailed business case for automation.`,
+    date: "2025-02-05",
+    author: "CareYu Team",
+    category: "Business",
+    readTime: "7 min read",
+    image: "storage",
+  },
+  {
+    slug: "cold-storage-automation-guide",
+    title: "Automating Cold Storage: Why Robots Belong in the Freezer",
+    excerpt: "Discover why automated systems are essential for cold storage warehouses, reducing worker exposure and energy costs while maintaining product integrity.",
+    content: `## The Cold Storage Challenge
+
+Cold storage warehouses operating at -25°C to -30°C present unique challenges that make automation not just beneficial, but essential.
+
+## Why Automate Cold Storage?
+
+### Worker Safety
+- Workers can only spend 15-20 minutes in deep freeze zones
+- Frequent rotation needed, reducing productivity
+- Risk of cold-related injuries and health issues
+
+### Energy Efficiency
+- Every door opening lets warm air in
+- Manual operations require wide aisles and frequent access
+- ASRS reduces door openings by 80%+
+
+### Product Integrity
+- Automated systems maintain consistent temperatures
+- No risk of products being left out during manual handling
+- Complete chain of custody tracking
+
+## Cold Storage ASRS Solutions
+
+Our cold-rated ASRS systems are engineered for extreme temperatures:
+- **Specialized lubricants** that work at -30°C
+- **Heated operator cabins** at pick stations outside the cold zone
+- **Air-lock integration** to minimize temperature loss
+- **Condensation management** systems
+
+## Results from CareYu Projects
+
+- 90% reduction in worker cold exposure
+- 30% energy cost savings
+- 2x throughput in freezer zones
+- Full GDP/GMP compliance
+
+Contact CareYu for a cold storage automation assessment.`,
+    date: "2025-01-20",
+    author: "CareYu Team",
+    category: "Cold Storage",
+    readTime: "5 min read",
+    image: "industry",
+  },
+  {
+    slug: "wms-integration-best-practices",
+    title: "WMS Integration: 5 Best Practices for Seamless Warehouse Software",
+    excerpt: "Learn the best practices for integrating a Warehouse Management System with ASRS, conveyors, and robotics for a fully connected warehouse.",
+    content: `## Why WMS Integration Matters
+
+A Warehouse Management System is only as good as its integration with physical automation. Poor integration leads to data gaps, inefficiencies, and costly errors.
+
+## Best Practice 1: Define Clear Data Flows
+
+Map every data exchange between systems:
+- Inbound: Purchase orders → WMS → ASRS put-away
+- Outbound: Sales orders → WMS → Pick → Pack → Ship
+- Inventory: Real-time sync between WMS and all automation
+
+## Best Practice 2: Use Standard Protocols
+
+- **REST APIs** for modern cloud-based integrations
+- **OPC-UA** for machine-level communication
+- **MQTT** for IoT sensor data
+- Avoid proprietary protocols that lock you in
+
+## Best Practice 3: Implement Real-Time Dashboards
+
+Operators need visibility into:
+- Order status and throughput
+- Equipment utilization and health
+- Inventory levels and locations
+- Exception alerts and escalations
+
+## Best Practice 4: Plan for Failure Modes
+
+- What happens when the WMS goes down?
+- Can the ASRS operate in degraded mode?
+- Are there manual fallback procedures?
+- How quickly can systems recover?
+
+## Best Practice 5: Test Thoroughly Before Go-Live
+
+- Unit testing for each integration point
+- End-to-end scenario testing
+- Load testing at peak volumes
+- User acceptance testing with operators
+
+CareYu's integration team ensures your WMS connects seamlessly with every automation component.`,
+    date: "2024-11-15",
+    author: "CareYu Team",
+    category: "Technology",
+    readTime: "6 min read",
+    image: "asrs",
   },
 ];
 
