@@ -111,7 +111,11 @@ const ProductDetail = () => {
       {/* Visual */}
       <section className="section-padding bg-secondary">
         <div className="container mx-auto text-center">
-          <Icon className="h-40 w-40 text-primary/15 mx-auto mb-8" />
+          {productImages[product.slug] ? (
+            <img src={productImages[product.slug]} alt={product.title} className="w-full max-w-3xl mx-auto h-[350px] object-cover rounded-xl mb-8" loading="lazy" />
+          ) : (
+            <Icon className="h-40 w-40 text-primary/15 mx-auto mb-8" />
+          )}
           <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide">
             <Link to="/contact">Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
