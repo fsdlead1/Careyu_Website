@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { products } from "@/data/products";
+import asrsImg from "@/assets/asrs-product.jpg";
+import vlmImg from "@/assets/product-vlm.jpg";
+import ptlImg from "@/assets/product-ptl.jpg";
+import conveyorImg from "@/assets/product-conveyor.jpg";
+import robotsImg from "@/assets/product-robots.jpg";
+
+const productImages: Record<string, string> = {
+  asrs: asrsImg,
+  "vertical-lift-module": vlmImg,
+  "pick-to-light": ptlImg,
+  "conveyor-systems": conveyorImg,
+  "warehouse-robots": robotsImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -76,18 +89,13 @@ const Products = () => {
                       </Link>
                     </Button>
                   </div>
-                  <div className={`bg-secondary rounded-xl overflow-hidden ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                    <div className="p-12 flex flex-col items-center justify-center min-h-[300px]">
-                      <Icon className="h-28 w-28 text-primary/20 mb-4" />
-                      <div className="grid grid-cols-2 gap-4 w-full max-w-xs">
-                        {Object.entries(product.specs).slice(0, 4).map(([k, v]) => (
-                          <div key={k} className="text-center">
-                            <p className="text-xs text-muted-foreground uppercase">{k}</p>
-                            <p className="font-heading font-bold text-sm text-foreground">{v}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  <div className={`rounded-xl overflow-hidden ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                    <img
+                      src={productImages[product.slug]}
+                      alt={product.title}
+                      className="w-full h-[300px] object-cover rounded-xl"
+                      loading="lazy"
+                    />
                   </div>
                 </motion.div>
               );

@@ -5,6 +5,11 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import servicesHero from "@/assets/services-hero.jpg";
+import asrsImg from "@/assets/asrs-product.jpg";
+import heroWarehouse from "@/assets/hero-warehouse.jpg";
+import businessImg from "@/assets/service-business.jpg";
+
+const serviceImages = [asrsImg, heroWarehouse, businessImg];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -101,8 +106,13 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                <div className={`bg-secondary rounded-xl p-8 flex items-center justify-center min-h-[250px] ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <svc.icon className="h-32 w-32 text-primary/20" />
+                <div className={`rounded-xl overflow-hidden ${i % 2 === 1 ? "md:order-1" : ""}`}>
+                  <img
+                    src={serviceImages[i]}
+                    alt={svc.title}
+                    className="w-full h-[280px] object-cover rounded-xl"
+                    loading="lazy"
+                  />
                 </div>
               </motion.div>
             ))}

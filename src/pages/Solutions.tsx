@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { solutions } from "@/data/solutions";
+import heroWarehouse from "@/assets/hero-warehouse.jpg";
+import ecommerceImg from "@/assets/solution-ecommerce.jpg";
+import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+import coldstorageImg from "@/assets/solution-coldstorage.jpg";
+
+const solutionImages: Record<string, string> = {
+  "warehouse-automation": heroWarehouse,
+  "e-commerce-fulfillment": ecommerceImg,
+  "manufacturing-automation": manufacturingImg,
+  "cold-storage-automation": coldstorageImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -79,6 +90,9 @@ const Solutions = () => {
                   </div>
 
                   <div className={`space-y-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <motion.div variants={fadeInUp}>
+                      <img src={solutionImages[sol.slug]} alt={sol.title} className="w-full h-[200px] object-cover rounded-xl" loading="lazy" />
+                    </motion.div>
                     <motion.div variants={fadeInUp} className="bg-card rounded-xl p-6 border border-border">
                       <h4 className="font-heading font-bold text-foreground mb-3 text-sm uppercase tracking-wide">How We Help</h4>
                       <ul className="space-y-2">

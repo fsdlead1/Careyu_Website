@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogPosts";
+import asrsImg from "@/assets/asrs-product.jpg";
+import warehouseImg from "@/assets/hero-warehouse.jpg";
+import ptlImg from "@/assets/product-ptl.jpg";
+import servicesImg from "@/assets/services-hero.jpg";
+import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+
+const blogImages: Record<string, string> = {
+  asrs: asrsImg,
+  warehouse: warehouseImg,
+  picktolight: ptlImg,
+  storage: servicesImg,
+  industry: manufacturingImg,
+};
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -41,11 +54,8 @@ const Blog = () => {
           {/* Featured post */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16">
             <div className="grid md:grid-cols-2 gap-8 bg-card rounded-xl border border-border overflow-hidden">
-              <div className="bg-primary/5 flex items-center justify-center p-12 min-h-[300px]">
-                <div className="text-center">
-                  <div className="font-heading text-6xl font-bold text-primary/20 mb-2">ASRS</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">Featured Article</div>
-                </div>
+              <div className="overflow-hidden min-h-[300px]">
+                <img src={blogImages[blogPosts[0].image]} alt={blogPosts[0].title} className="w-full h-full object-cover" />
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide rounded px-2 py-1 mb-3 w-fit">{blogPosts[0].category}</span>
@@ -66,8 +76,8 @@ const Blog = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map((post) => (
               <motion.article key={post.slug} variants={fadeInUp} className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg transition-shadow group">
-                <div className="bg-secondary p-8 flex items-center justify-center h-[180px]">
-                  <span className="font-heading text-3xl font-bold text-primary/15 uppercase">{post.category}</span>
+                <div className="h-[180px] overflow-hidden">
+                  <img src={blogImages[post.image]} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                 </div>
                 <div className="p-6">
                   <span className="inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide rounded px-2 py-1 mb-3">{post.category}</span>
