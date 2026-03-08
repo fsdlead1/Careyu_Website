@@ -226,7 +226,7 @@ const Careers = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.3, ease }}
                       className="overflow-hidden"
                     >
                       <div className="px-5 md:px-6 pb-6 border-t border-border pt-5">
