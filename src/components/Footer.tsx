@@ -76,8 +76,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-navy-foreground/10 text-center text-sm text-navy-foreground/50">
-          © {new Date().getFullYear()} CareYu Automation. All rights reserved.
+        <div className="mt-12 pt-6 border-t border-navy-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-navy-foreground/50">
+          <span>© {new Date().getFullYear()} CareYu Automation. All rights reserved.</span>
+          <span>Powered by <a href="https://digisailor.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">DigiSailor</a></span>
         </div>
       </div>
     </footer>
