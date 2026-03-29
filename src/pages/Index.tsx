@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Warehouse, Cog, BarChart3, Box, Phone, Mail, MapPin, ChevronRight, Quote, Boxes, ArrowUpFromLine, Lightbulb, ArrowRightLeft, Bot } from "lucide-react";
+import { ArrowRight, Warehouse, Cog, BarChart3, Box, Phone, Mail, MapPin, Quote, Boxes, ArrowUpFromLine, Lightbulb, ArrowRightLeft, Bot, FileText, Users, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/hero-warehouse.jpg";
@@ -62,7 +63,7 @@ const Index = () => {
           <button onClick={() => scrollTo("home")} className="shrink-0">
             <img src={logo} alt="CareYu Automation Logo" className="h-10 md:h-14 w-auto" />
           </button>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -72,6 +73,9 @@ const Index = () => {
                 {link.label}
               </button>
             ))}
+            <Link to="/blog" className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Blog</Link>
+            <Link to="/careers" className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Careers</Link>
+            <Link to="/case-studies" className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Case Studies</Link>
             <Button size="sm" asChild>
               <a href="tel:+919941014234" className="gap-2">
                 <Phone className="h-4 w-4" /> Call Us
@@ -225,6 +229,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Explore More — Links to sub-pages */}
+      <section className="section-padding bg-background">
+        <div className="container mx-auto">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-12">
+            <motion.p variants={fadeInUp} className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-2">Explore More</motion.p>
+            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-5xl font-bold text-foreground">Resources & Opportunities</motion.h2>
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: FileText, title: "Blog & Insights", desc: "Expert articles on ASRS, warehouse automation, and industry trends.", to: "/blog" },
+              { icon: Briefcase, title: "Careers", desc: "Join our team and build the future of industrial automation.", to: "/careers" },
+              { icon: Users, title: "Case Studies", desc: "Real-world projects showcasing measurable results and ROI.", to: "/case-studies" },
+            ].map((item) => (
+              <motion.div key={item.title} variants={fadeInUp} whileHover={{ y: -6 }}>
+                <Link to={item.to} className="block bg-card rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-xl transition-all group text-center">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary transition-colors duration-300">
+                    <item.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.desc}</p>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="section-padding bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -233,12 +264,8 @@ const Index = () => {
         </div>
         <div className="container mx-auto relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-12">
-            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-5xl font-bold text-navy-foreground mb-4">
-              Get In Touch
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="text-navy-foreground/70 max-w-xl mx-auto">
-              Ready to transform your operations? Contact us for a free consultation.
-            </motion.p>
+            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-5xl font-bold text-navy-foreground mb-4">Get In Touch</motion.h2>
+            <motion.p variants={fadeInUp} className="text-navy-foreground/70 max-w-xl mx-auto">Ready to transform your operations? Contact us for a free consultation.</motion.p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
