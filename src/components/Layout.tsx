@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -6,14 +6,16 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = forwardRef<HTMLDivElement, LayoutProps>(({ children }, ref) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div ref={ref} className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 pt-16 md:pt-20">{children}</main>
       <Footer />
     </div>
   );
-};
+});
+
+Layout.displayName = "Layout";
 
 export default Layout;

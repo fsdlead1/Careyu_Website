@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, forwardRef } from "react";
 
 interface SEOHeadProps {
   title: string;
@@ -7,7 +7,7 @@ interface SEOHeadProps {
   canonical?: string;
 }
 
-const SEOHead = ({ title, description, keywords, canonical }: SEOHeadProps) => {
+const SEOHead = forwardRef<null, SEOHeadProps>(({ title, description, keywords, canonical }, _ref) => {
   useEffect(() => {
     document.title = title;
 
@@ -43,6 +43,8 @@ const SEOHead = ({ title, description, keywords, canonical }: SEOHeadProps) => {
   }, [title, description, keywords, canonical]);
 
   return null;
-};
+});
+
+SEOHead.displayName = "SEOHead";
 
 export default SEOHead;
