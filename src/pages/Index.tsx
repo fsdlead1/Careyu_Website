@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Warehouse, Cog, BarChart3, Box, Phone, Mail, MapPin, Quote, Boxes, ArrowUpFromLine, Lightbulb, ArrowRightLeft, Bot, FileText, Users, Briefcase } from "lucide-react";
+import { ArrowRight, Warehouse, Cog, BarChart3, Phone, Mail, MapPin, Quote, FileText, Users, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
+import CatalogShowcase from "@/components/CatalogShowcase";
 import heroImg from "@/assets/hero-warehouse.jpg";
 import asrsImg from "@/assets/asrs-product.jpg";
 import logo from "@/assets/logo.png";
@@ -14,13 +15,6 @@ const fadeInRight = { hidden: { opacity: 0, x: 40 }, visible: { opacity: 1, x: 0
 const stagger = { visible: { transition: { staggerChildren: 0.12 } } };
 const scaleIn = { hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease } } };
 
-const products = [
-  { icon: Boxes, title: "ASRS Systems", desc: "High-density automated storage with precision crane/shuttle retrieval." },
-  { icon: ArrowUpFromLine, title: "Vertical Lift Module", desc: "Enclosed vertical storage delivering goods to ergonomic pick windows." },
-  { icon: Lightbulb, title: "Pick-to-Light", desc: "LED-guided picking for ultra-fast, accurate order fulfillment." },
-  { icon: ArrowRightLeft, title: "Conveyor Systems", desc: "Automated material transport and sorting for streamlined flow." },
-  { icon: Bot, title: "Warehouse Robots", desc: "AMR/AGV solutions for intelligent material handling." },
-];
 
 const services = [
   { icon: Warehouse, title: "Storage Solutions", desc: "Custom storage rack systems integrated with robust data management." },
@@ -37,7 +31,7 @@ const testimonials = [
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#products", label: "Products" },
+  { href: "#catalog", label: "Catalog" },
   { href: "#services", label: "Services" },
   { href: "#testimonials", label: "Clients" },
   { href: "#contact", label: "Contact" },
@@ -106,8 +100,8 @@ const Index = () => {
               Precision and Performance through Automation. Transforming storage systems with pioneering solutions.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={() => scrollTo("products")} className="font-heading font-semibold uppercase tracking-wide h-12 px-8">
-                Explore Products <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" onClick={() => scrollTo("catalog")} className="font-heading font-semibold uppercase tracking-wide h-12 px-8">
+                Explore Catalog <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-12 px-8">
                 Get Free Consultation
@@ -165,26 +159,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products */}
-      <section id="products" className="section-padding bg-secondary/50">
-        <div className="container mx-auto">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="text-center mb-14">
-            <motion.p variants={fadeInUp} className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-2">Our Products</motion.p>
-            <motion.h2 variants={fadeInUp} className="font-heading text-3xl md:text-5xl font-bold text-foreground">Automation Solutions</motion.h2>
-          </motion.div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <motion.div key={p.title} variants={fadeInUp} whileHover={{ y: -6 }} className="bg-card rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-xl transition-all group">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <p.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                </div>
-                <h3 className="font-heading text-xl font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* Catalog: 4 main categories with sub-products */}
+      <CatalogShowcase />
 
       {/* Services */}
       <section id="services" className="section-padding bg-background">
