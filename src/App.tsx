@@ -13,6 +13,7 @@ const Careers = lazy(() => import("./pages/Careers"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const SubProductPage = lazy(() => import("./pages/SubProductPage"));
+const NestedSubProductPage = lazy(() => import("./pages/NestedSubProductPage"));
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/catalog/:categorySlug" element={<CategoryPage />} />
             <Route path="/catalog/:categorySlug/:subSlug" element={<SubProductPage />} />
+            <Route path="/catalog/:categorySlug/:subSlug/:nestedSlug" element={<NestedSubProductPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

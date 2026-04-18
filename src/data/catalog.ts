@@ -7,6 +7,7 @@ export interface SubProduct {
   short: string;
   description: string;
   features: string[];
+  subProducts?: SubProduct[];
 }
 
 export interface Category {
@@ -56,123 +57,176 @@ export const categories: Category[] = [
         ],
       },
       {
-        slug: "spr-selective-pallet-racking",
-        name: "SPR – Selective Pallet Racking",
-        short: "Universal direct-access pallet storage.",
+        slug: "industrial-heavy-duty-racks",
+        name: "Industrial Heavy Duty Racks",
+        short: "Engineered racking for the most demanding loads.",
         description:
-          "The most widely adopted pallet storage system, offering 100% direct access to every pallet — ideal for warehouses with high SKU variety and moderate density needs.",
+          "Heavy-duty rack systems engineered for industrial loads — designed, manufactured and installed in-house with seismic-grade structural compliance.",
         features: [
-          "100% pallet selectivity",
-          "Adjustable beam levels",
-          "Compatible with all forklifts",
-          "Fast deployment",
+          "Seismic-rated heavy duty racking",
+          "Pallet, Cantilever, & Drive-In systems",
+          "ASRS-ready structures",
         ],
-      },
-      {
-        slug: "double-deep-racking",
-        name: "Double Deep Racking",
-        short: "2x density with reach-truck access.",
-        description:
-          "Pallets stored two-deep, doubling storage density while keeping a high level of selectivity. Best used with specialised reach trucks for fast cycle times.",
-        features: [
-          "Up to 2x density vs. SPR",
-          "Reduced aisle count",
-          "Good selectivity (~50%)",
-          "FIFO/LIFO compatible",
-        ],
-      },
-      {
-        slug: "drive-in-racking",
-        name: "Drive-In Racking",
-        short: "Maximum density LIFO bulk storage.",
-        description:
-          "Forklift drives directly into the rack lane, allowing extremely high-density storage of homogeneous SKUs — perfect for cold storage, beverages, and bulk inventory.",
-        features: [
-          "Up to 75% space utilisation",
-          "Ideal for low-SKU, high-volume",
-          "LIFO inventory rotation",
-          "Cold-storage compatible",
-        ],
-      },
-      {
-        slug: "mezzanine-floor",
-        name: "Mezzanine Floor",
-        short: "Double your usable floor area.",
-        description:
-          "Custom-engineered mezzanine structures that create new floor levels within existing buildings — ideal for picking, light assembly, or office space without expanding your footprint.",
-        features: [
-          "2–3x floor area gain",
-          "Custom load capacity",
-          "Integrated staircases & lifts",
-          "Modular & relocatable",
-        ],
-      },
-      {
-        slug: "shuttle-racking",
-        name: "Shuttle Racking",
-        short: "Semi-automated high-density pallet flow.",
-        description:
-          "A radio-controlled shuttle handles pallet movement deep inside the rack, combining the density of drive-in with much faster cycle times and FIFO/LIFO flexibility.",
-        features: [
-          "High-density + fast cycles",
-          "FIFO or LIFO operation",
-          "Reduced forklift movement",
-          "Battery-powered shuttle",
-        ],
-      },
-      {
-        slug: "four-way-shuttle-racking",
-        name: "Four-Way Shuttle Racking",
-        short: "Omnidirectional shuttle for grid storage.",
-        description:
-          "Advanced shuttle moving in four directions across an entire rack grid, enabling flexible routing, multi-aisle access, and dramatically improved throughput per shuttle.",
-        features: [
-          "Omnidirectional movement",
-          "Cross-aisle flexibility",
-          "High SKU mix support",
-          "Software-coordinated fleet",
-        ],
-      },
-      {
-        slug: "mother-child-shuttle-racking",
-        name: "Mother-Child Shuttle Racking",
-        short: "Mother carrier with child shuttle for ultra-deep lanes.",
-        description:
-          "A mother shuttle transports a smaller child shuttle across aisles, which then handles deep-lane storage — combining ASRS-class throughput with very high density.",
-        features: [
-          "Ultra-deep lane storage",
-          "ASRS-grade throughput",
-          "Reduced shuttle count",
-          "Ideal for cold storage",
-        ],
-      },
-      {
-        slug: "mini-load",
-        name: "Mini Load (Tote-to-Person)",
-        short: "Goods-to-person tote handling automation.",
-        description:
-          "Automated mini-load cranes deliver totes and cartons directly to ergonomic pick stations — ideal for e-commerce, spare parts, and small-item fulfilment.",
-        features: [
-          "Goods-to-person workflow",
-          "Up to 1,000 totes/hour",
-          "Ergonomic pick stations",
-          "Tight integration with WMS",
-        ],
-      },
-      {
-        slug: "mobile-shelving-iot",
-        name: "Mobile Shelving Racks (IoT Integrated)",
-        short: "Compact mobile racks with IoT controls.",
-        description:
-          "Motorised mobile shelving on rails with IoT controls, delivering up to 80% more storage in the same footprint — fully integrated with WMS and access controls.",
-        features: [
-          "Up to 80% more capacity",
-          "IoT & WMS integration",
-          "Access-controlled aisles",
-          "Safety light curtains",
-        ],
-      },
-    ],
+        subProducts: [
+          {
+            slug: "spr-selective-pallet-racking",
+            name: "SPR – Selective Pallet Racking",
+            short: "Universal direct-access pallet storage.",
+            description:
+              "The most widely adopted pallet storage system, offering 100% direct access to every pallet — ideal for warehouses with high SKU variety and moderate density needs.",
+            features: [
+              "100% pallet selectivity",
+              "Adjustable beam levels",
+              "Compatible with all forklifts",
+              "Fast deployment",
+            ],
+          },
+          {
+            slug: "double-deep-racking",
+            name: "Double Deep Racking",
+            short: "2x density with reach-truck access.",
+            description:
+              "Pallets stored two-deep, doubling storage density while keeping a high level of selectivity. Best used with specialised reach trucks for fast cycle times.",
+            features: [
+              "Up to 2x density vs. SPR",
+              "Reduced aisle count",
+              "Good selectivity (~50%)",
+              "FIFO/LIFO compatible",
+            ],
+          },
+          {
+            slug: "drive-in-racking",
+            name: "Drive-In Racking",
+            short: "Maximum density LIFO bulk storage.",
+            description:
+              "Forklift drives directly into the rack lane, allowing extremely high-density storage of homogeneous SKUs — perfect for cold storage, beverages, and bulk inventory.",
+            features: [
+              "Up to 75% space utilisation",
+              "Ideal for low-SKU, high-volume",
+              "LIFO inventory rotation",
+              "Cold-storage compatible",
+            ],
+          },
+          {
+            slug: "mezzanine-floor",
+            name: "Mezzanine Floor",
+            short: "Double your usable floor area.",
+            description:
+              "Custom-engineered mezzanine structures that create new floor levels within existing buildings — ideal for picking, light assembly, or office space without expanding your footprint.",
+            features: [
+              "2–3x floor area gain",
+              "Custom load capacity",
+              "Integrated staircases & lifts",
+              "Modular & relocatable",
+            ],
+          },
+          {
+            slug: "shuttle-racking",
+            name: "Shuttle Racking",
+            short: "Semi-automated high-density pallet flow.",
+            description:
+              "A radio-controlled shuttle handles pallet movement deep inside the rack, combining the density of drive-in with much faster cycle times and FIFO/LIFO flexibility.",
+            features: [
+              "High-density + fast cycles",
+              "FIFO or LIFO operation",
+              "Reduced forklift movement",
+              "Battery-powered shuttle",
+            ],
+          },
+          {
+            slug: "four-way-shuttle-racking",
+            name: "Four-Way Shuttle Racking",
+            short: "Omnidirectional shuttle for grid storage.",
+            description:
+              "Advanced shuttle moving in four directions across an entire rack grid, enabling flexible routing, multi-aisle access, and dramatically improved throughput per shuttle.",
+            features: [
+              "Omnidirectional movement",
+              "Cross-aisle flexibility",
+              "High SKU mix support",
+              "Software-coordinated fleet",
+            ],
+          },
+          {
+            slug: "mother-child-shuttle-racking",
+            name: "Mother-Child Shuttle Racking",
+            short: "Mother carrier with child shuttle for ultra-deep lanes.",
+            description:
+              "A mother shuttle transports a smaller child shuttle across aisles, which then handles deep-lane storage — combining ASRS-class throughput with very high density.",
+            features: [
+              "Ultra-deep lane storage",
+              "ASRS-grade throughput",
+              "Reduced shuttle count",
+              "Ideal for cold storage",
+            ],
+          },
+          {
+            slug: "mini-load",
+            name: "Mini Load (Tote-to-Person)",
+            short: "Goods-to-person tote handling automation.",
+            description:
+              "Automated mini-load cranes deliver totes and cartons directly to ergonomic pick stations — ideal for e-commerce, spare parts, and small-item fulfilment.",
+            features: [
+              "Goods-to-person workflow",
+              "Up to 1,000 totes/hour",
+              "Ergonomic pick stations",
+              "Tight integration with WMS",
+            ],
+          },
+          {
+            slug: "mobile-shelving-iot",
+            name: "Mobile Shelving Racks (IoT Integrated)",
+            short: "Compact mobile racks with IoT controls.",
+            description:
+              "Motorised mobile shelving on rails with IoT controls, delivering up to 80% more storage in the same footprint — fully integrated with WMS and access controls.",
+            features: [
+              "Up to 80% more capacity",
+              "IoT & WMS integration",
+              "Access-controlled aisles",
+              "Safety light curtains",
+            ],
+          },
+          {
+            slug: "heavy-duty-pallet-racks",
+            name: "Heavy Duty Pallet Racks",
+            short: "Reinforced racks for ultra-heavy pallet loads.",
+            description:
+              "Reinforced uprights and box-beam construction supporting pallet loads of 2,500+ kg per level — ideal for steel, automotive and industrial component storage.",
+            features: [
+              "Up to 2,500+ kg per level",
+              "Box-beam construction",
+              "Seismic-rated design",
+              "Heavy-gauge uprights",
+            ],
+          },
+          {
+            slug: "cantilever-racks",
+            name: "Cantilever Racks",
+            short: "Long-load storage for pipes, lumber & profiles.",
+            description:
+              "Open-arm cantilever systems for storing long, awkward loads — pipes, timber, extrusions and steel profiles — with full forklift access from the front.",
+            features: [
+              "Open-front access",
+              "Single or double sided",
+              "Adjustable arm heights",
+              "Indoor/outdoor variants",
+            ],
+          },
+          {
+            slug: "long-span-shelving",
+            name: "Long-Span Shelving",
+            short: "Hand-loaded shelving for medium loads.",
+            description:
+              "Boltless long-span shelving for hand-picked items up to 1,000 kg per level — perfect for spare parts, cartons and archival storage with full visibility.",
+            features: [
+              "Up to 1,000 kg per level",
+              "Boltless assembly",
+              "Adjustable shelves",
+              "Multi-tier configuration",
+            ],
+          },
+        ]
+      }
+    ]
   },
   {
     slug: "vision-based-solutions",
@@ -273,57 +327,7 @@ export const categories: Category[] = [
         ],
       },
     ],
-  },
-  {
-    slug: "industrial-heavy-duty-racks",
-    name: "Industrial Heavy Duty Racks",
-    tagline: "Engineered racking for the most demanding loads",
-    description:
-      "Heavy-duty rack systems engineered for industrial loads — designed, manufactured and installed in-house with seismic-grade structural compliance.",
-    icon: "Layers",
-    image: "manufacturing",
-    subProducts: [
-      {
-        slug: "heavy-duty-pallet-racks",
-        name: "Heavy Duty Pallet Racks",
-        short: "Reinforced racks for ultra-heavy pallet loads.",
-        description:
-          "Reinforced uprights and box-beam construction supporting pallet loads of 2,500+ kg per level — ideal for steel, automotive and industrial component storage.",
-        features: [
-          "Up to 2,500+ kg per level",
-          "Box-beam construction",
-          "Seismic-rated design",
-          "Heavy-gauge uprights",
-        ],
-      },
-      {
-        slug: "cantilever-racks",
-        name: "Cantilever Racks",
-        short: "Long-load storage for pipes, lumber & profiles.",
-        description:
-          "Open-arm cantilever systems for storing long, awkward loads — pipes, timber, extrusions and steel profiles — with full forklift access from the front.",
-        features: [
-          "Open-front access",
-          "Single or double sided",
-          "Adjustable arm heights",
-          "Indoor/outdoor variants",
-        ],
-      },
-      {
-        slug: "long-span-shelving",
-        name: "Long-Span Shelving",
-        short: "Hand-loaded shelving for medium loads.",
-        description:
-          "Boltless long-span shelving for hand-picked items up to 1,000 kg per level — perfect for spare parts, cartons and archival storage with full visibility.",
-        features: [
-          "Up to 1,000 kg per level",
-          "Boltless assembly",
-          "Adjustable shelves",
-          "Multi-tier configuration",
-        ],
-      },
-    ],
-  },
+  }
 ];
 
 export const getCategory = (slug: string): Category | undefined =>
@@ -338,4 +342,16 @@ export const getSubProduct = (
   const subProduct = category.subProducts.find((s) => s.slug === subSlug);
   if (!subProduct) return undefined;
   return { category, subProduct };
+};
+
+export const getNestedSubProduct = (
+  categorySlug: string,
+  subSlug: string,
+  nestedSlug: string
+): { category: Category; subProduct: SubProduct; nestedProduct: SubProduct } | undefined => {
+  const result = getSubProduct(categorySlug, subSlug);
+  if (!result || !result.subProduct.subProducts) return undefined;
+  const nestedProduct = result.subProduct.subProducts.find(s => s.slug === nestedSlug);
+  if (!nestedProduct) return undefined;
+  return { ...result, nestedProduct };
 };
