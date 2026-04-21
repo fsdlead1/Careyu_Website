@@ -1,11 +1,20 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import { ArrowRight, Warehouse, Cog, BarChart3, Phone, Mail, MapPin, Quote, FileText, Users, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SEOHead from "@/components/SEOHead";
 import CatalogShowcase from "@/components/CatalogShowcase";
-import heroImg from "@/assets/hero-warehouse.jpg";
-import asrsImg from "@/assets/asrs-product.jpg";
+import heroImg from "@/assets/home/hero-warehouse.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
+import servicesImg from "@/assets/home/services-hero.jpg";
+import solutionImg from "@/assets/home/solution-manufacturing.jpg"
+import solutionColdImg from "@/assets/home/solution-coldstorage.jpg"
+import serviceBusinessImg from "@/assets/home/service-business.jpg"
+import productVlmImg from "@/assets/home/product-vlm.jpg"
+import productRobotsImg from "@/assets/home/product-robots.jpg"
+import productPtlImg from "@/assets/home/product-ptl.jpg"
+import productConveyorImg from "@/assets/home/product-conveyor.jpg"
 import logo from "@/assets/logo.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -41,7 +50,18 @@ const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
+const heroImages = [heroImg, asrsImg, servicesImg, productConveyorImg, productRobotsImg, solutionImg, serviceBusinessImg, productPtlImg, solutionColdImg, productVlmImg];
+
 const Index = () => {
+  const [currentImg, setCurrentImg] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen">
       <SEOHead
@@ -81,9 +101,20 @@ const Index = () => {
 
       {/* Hero */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Automated warehouse" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-hero-overlay" />
+        <div className="absolute inset-0 bg-background">
+          <AnimatePresence>
+            <motion.img
+              key={currentImg}
+              src={heroImages[currentImg]}
+              alt="Automated warehouse"
+              className="w-full h-full object-cover absolute inset-0"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-hero-overlay z-10" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
@@ -103,7 +134,7 @@ const Index = () => {
               <Button size="lg" onClick={() => scrollTo("catalog")} className="font-heading font-semibold uppercase tracking-wide h-12 px-8">
                 Explore Catalog <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 h-12 px-8">
+              <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10 h-12 px-8">
                 Get Free Consultation
               </Button>
             </motion.div>
@@ -246,7 +277,7 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
               { icon: Phone, label: "Call Us", value: "+91-9941014234", href: "tel:+919941014234" },
-              { icon: Mail, label: "Email", value: "bernardpious@careyuautomation.com", href: "mailto:bernardpious@careyuautomation.com" },
+              { icon: Mail, label: "Email", value: "projects@careyu.ai", href: "mailto:projects@careyu.ai" },
               { icon: MapPin, label: "Visit Us", value: "28/2, 2nd Main Rd, Mogappair, Chennai - 600050", href: undefined },
             ].map((item) => (
               <motion.div key={item.label} variants={fadeInUp} className="text-center">

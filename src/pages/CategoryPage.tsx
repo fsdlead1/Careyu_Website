@@ -33,7 +33,7 @@ const CategoryPage = () => {
       <main className="flex-1 pt-16 md:pt-20">
         {/* Hero */}
         <section className="relative bg-navy overflow-hidden">
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-90">
             <img src={img} alt="" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/40" />
           </div>

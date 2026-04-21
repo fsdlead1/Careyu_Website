@@ -67,7 +67,7 @@ const NestedSubProductPage = () => {
                         <Phone className="h-4 w-4" /> Request Quote
                       </a>
                     </Button>
-                    <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                    <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
                       <Link to={`/catalog/${category.slug}/${subProduct.slug}`}>
                         <ArrowLeft className="h-4 w-4 mr-2" /> Back to {subProduct.name}
                       </Link>
@@ -76,7 +76,7 @@ const NestedSubProductPage = () => {
                 </div>
                 <motion.div variants={fadeInUp}>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                    <img src={img} alt={nestedProduct.name} className="w-full h-[300px] md:h-[380px] object-cover" />
+                    <img src={nestedProduct.image} alt={nestedProduct.name} className="w-full h-[300px] md:h-[380px] object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
                   </div>
                 </motion.div>

@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Zap, TrendingUp, Shield, Clock } from "lucide
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
-import asrsImg from "@/assets/asrs-product.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -245,10 +245,10 @@ const ASRSProduct = () => {
               Get a free consultation and discover how ASRS can save you 85% floor space while boosting throughput 3x.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
                 <Link to="/contact">Get Free Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
                 <Link to="/products">View All Products</Link>
               </Button>
             </motion.div>

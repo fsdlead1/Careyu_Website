@@ -4,10 +4,10 @@ import { ArrowRight, Boxes, LayoutGrid, Maximize, CheckCircle2, Warehouse, Cpu, 
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
-import servicesHero from "@/assets/services-hero.jpg";
-import asrsImg from "@/assets/asrs-product.jpg";
-import heroWarehouse from "@/assets/hero-warehouse.jpg";
-import businessImg from "@/assets/service-business.jpg";
+import servicesHero from "@/assets/home/services-hero.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
+import heroWarehouse from "@/assets/home/hero-warehouse.jpg";
+import businessImg from "@/assets/home/service-business.jpg";
 
 const serviceImages = [asrsImg, heroWarehouse, businessImg];
 

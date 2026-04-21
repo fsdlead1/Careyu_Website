@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
-import asrsImg from "@/assets/asrs-product.jpg";
-import warehouseImg from "@/assets/hero-warehouse.jpg";
-import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
+import warehouseImg from "@/assets/home/hero-warehouse.jpg";
+import manufacturingImg from "@/assets/home/solution-manufacturing.jpg";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } } };

@@ -7,15 +7,15 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-// Utilizing high-resolution external real-world stock photos
-const asrsImg = "https://images.unsplash.com/photo-1586528116311-ad8ed7c1515f?q=80&w=1200&auto=format&fit=crop";
-const robotsImg = "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop";
-const ecommerceImg = "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop";
-const manufacturingImg = "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200&auto=format&fit=crop";
-const vlmImg = "https://images.unsplash.com/photo-1565891741441-64926e441838?q=80&w=1200&auto=format&fit=crop";
-const conveyorImg = "https://images.unsplash.com/photo-1622322306260-ebd1b66ec068?q=80&w=1200&auto=format&fit=crop";
-const ptlImg = "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200&auto=format&fit=crop";
-const coldImg = "https://images.unsplash.com/photo-1580983546524-7833a6f19451?q=80&w=1200&auto=format&fit=crop";
+// ✅ Static imports (correct way for assets)
+import asrsImg from "../assets/catelog/asrs.jpg";
+import robotsImg from "../assets/catelog/robots.avif";
+import ecommerceImg from "../assets/catelog/ecommerce.avif";
+import manufacturingImg from "../assets/catelog/manufacturing.avif";
+import vlmImg from "../assets/catelog/vlm.avif";
+import conveyorImg from "../assets/catelog/conveyor.jpg";
+import ptlImg from "../assets/catelog/ptl.avif";
+import coldImg from "../assets/catelog/cold.avif";
 
 const iconMap: Record<string, LucideIcon> = {
   Boxes,

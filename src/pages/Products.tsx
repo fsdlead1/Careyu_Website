@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { products } from "@/data/products";
-import asrsImg from "@/assets/asrs-product.jpg";
-import vlmImg from "@/assets/product-vlm.jpg";
-import ptlImg from "@/assets/product-ptl.jpg";
-import conveyorImg from "@/assets/product-conveyor.jpg";
-import robotsImg from "@/assets/product-robots.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
+import vlmImg from "@/assets/home/product-vlm.jpg";
+import ptlImg from "@/assets/home/product-ptl.jpg";
+import conveyorImg from "@/assets/home/product-conveyor.jpg";
+import robotsImg from "@/assets/home/product-robots.jpg";
 
 const productImages: Record<string, string> = {
   asrs: asrsImg,

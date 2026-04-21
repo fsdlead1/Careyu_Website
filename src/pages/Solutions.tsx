@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { solutions } from "@/data/solutions";
-import heroWarehouse from "@/assets/hero-warehouse.jpg";
-import ecommerceImg from "@/assets/solution-ecommerce.jpg";
-import manufacturingImg from "@/assets/solution-manufacturing.jpg";
-import coldstorageImg from "@/assets/solution-coldstorage.jpg";
+import heroWarehouse from "@/assets/home/hero-warehouse.jpg";
+import ecommerceImg from "@/assets/home/solution-ecommerce.jpg";
+import manufacturingImg from "@/assets/home/solution-manufacturing.jpg";
+import coldstorageImg from "@/assets/home/solution-coldstorage.jpg";
 
 const solutionImages: Record<string, string> = {
   "warehouse-automation": heroWarehouse,

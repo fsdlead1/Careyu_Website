@@ -7,11 +7,11 @@ import { Input } from "@/components/ui/input";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogPosts";
-import asrsImg from "@/assets/asrs-product.jpg";
-import warehouseImg from "@/assets/hero-warehouse.jpg";
-import ptlImg from "@/assets/product-ptl.jpg";
-import servicesImg from "@/assets/services-hero.jpg";
-import manufacturingImg from "@/assets/solution-manufacturing.jpg";
+import asrsImg from "@/assets/home/asrs-product.jpg";
+import warehouseImg from "@/assets/home/hero-warehouse.jpg";
+import ptlImg from "@/assets/home/product-ptl.jpg";
+import servicesImg from "@/assets/home/service-business.jpg";
+import manufacturingImg from "@/assets/home/solution-manufacturing.jpg";
 
 const blogImages: Record<string, string> = {
   asrs: asrsImg,

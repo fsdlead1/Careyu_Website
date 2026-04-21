@@ -52,13 +52,13 @@ const CatalogShowcase = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                      <h3 className="font-heading text-2xl md:text-4xl font-bold text-foreground">
+                        {cat.name}
+                      </h3>
+                      {/* <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                         Category {String(idx + 1).padStart(2, "0")}
-                      </span>
+                      </span> */}
                     </div>
-                    <h3 className="font-heading text-2xl md:text-4xl font-bold text-foreground mb-2">
-                      {cat.name}
-                    </h3>
                     <p className="text-primary font-semibold mb-3">{cat.tagline}</p>
                     <p className="text-muted-foreground leading-relaxed mb-5">{cat.description}</p>
                     <Link

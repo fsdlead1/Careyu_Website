@@ -41,7 +41,7 @@ const SubProductPage = () => {
         {/* Hero */}
         <section className={`bg-navy ${isNestedCategory ? "relative overflow-hidden" : ""}`}>
           {isNestedCategory && (
-            <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 opacity-90">
               <img src={img} alt="" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60" />
             </div>
@@ -74,7 +74,7 @@ const SubProductPage = () => {
                           <Phone className="h-4 w-4" /> Request Quote
                         </a>
                       </Button>
-                      <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                      <Button size="lg" variant="outline" asChild className="border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
                         <Link to={`/catalog/${category.slug}`}>
                           <ArrowLeft className="h-4 w-4 mr-2" /> Back to Category
                         </Link>
@@ -124,26 +124,33 @@ const SubProductPage = () => {
                   <motion.div key={nested.slug} variants={fadeInUp} whileHover={{ y: -6 }}>
                     <Link
                       to={`/catalog/${category.slug}/${subProduct.slug}/${nested.slug}`}
-                      className="block bg-card rounded-xl p-6 border border-border hover:border-primary/50 hover:shadow-xl transition-all h-full group"
+                      className="block bg-card rounded-xl p-6 border border-border hover:border-primary/50 hover:shadow-xl transition-all h-full group flex flex-col"
                     >
-                      <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors">
-                        <Icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors shrink-0">
+                        <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
                       </div>
                       <h3 className="font-heading text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {nested.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{nested.short}</p>
-                      <ul className="space-y-1.5 mb-4">
-                        {nested.features.slice(0, 3).map((f) => (
-                          <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight className="h-4 w-4" />
-                      </span>
+                      <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">{nested.short}</p>
+                      <div className="flex justify-between items-start mb-5 gap-4">
+                        <div className="">
+                          <ul className="space-y-1.5 mb-4">
+                            {nested.features.slice(0, 3).map((f) => (
+                              <li key={f} className="flex items-start gap-2 text-xs text-muted-foreground">
+                                <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+                                {f}
+                              </li>
+                            ))}
+                          </ul>
+                          <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                            Learn more <ArrowRight className="h-4 w-4" />
+                          </span>
+                        </div>
+                        <div className="w-40 h-40 rounded-lg overflow-hidden bg-muted shrink-0 shadow-sm border border-border/50">
+                          <img src={nested.image || img} alt={nested.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 align-self-center" />
+                        </div>
+                      </div>
                     </Link>
                   </motion.div>
                 ))}
