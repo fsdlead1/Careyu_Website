@@ -95,9 +95,9 @@ const CatalogShowcase = () => {
                     <motion.div key={sub.slug} variants={fadeInUp} whileHover={{ y: -4 }}>
                       <Link
                         to={`/catalog/${cat.slug}/${sub.slug}`}
-                        className="block bg-card rounded-xl p-5 border border-border hover:border-primary/50 hover:shadow-lg transition-all h-full group"
+                        className="block bg-card rounded-xl p-5 border border-border hover:border-primary/50 hover:shadow-lg transition-all h-full group hover:animate-pulse-slow"
                       >
-                        <div className="flex items-start justify-between gap-2 mb-2">
+                        <div className="flex items-start justify-between gap-2 mb-2 animate-float-delayed">
                           <Icon className="h-5 w-5 text-primary/70 shrink-0" />
                           <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                         </div>

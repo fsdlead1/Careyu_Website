@@ -83,7 +83,7 @@ const ASRSProduct = () => {
       <section className="relative h-[55vh] min-h-[450px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={asrsImg} alt="ASRS automated storage and retrieval system" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-hero-overlay" />
+          <div className="absolute inset-0 bg-hero-overlay animate-pulse-slow" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
@@ -95,7 +95,7 @@ const ASRSProduct = () => {
               High-density automated storage with precision crane/shuttle retrieval for maximum space utilization and operational efficiency.
             </motion.p>
             <motion.div variants={fadeInUp} className="mt-6">
-              <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide">
+              <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide shadow-lg animate-glow">
                 <Link to="/contact">Request a Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </motion.div>
@@ -109,7 +109,7 @@ const ASRSProduct = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((b) => (
               <motion.div key={b.title} variants={fadeInUp} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-primary-foreground/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-full bg-primary-foreground/10 flex items-center justify-center mx-auto mb-4 animate-float">
                   <b.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
                 <h3 className="font-heading text-xl font-bold text-primary-foreground mb-2">{b.title}</h3>
@@ -163,7 +163,7 @@ const ASRSProduct = () => {
         <div className="container mx-auto">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-8">
             {asrsTypes.map((type) => (
-              <motion.div key={type.name} variants={fadeInUp} className="bg-card rounded-xl p-8 border border-border hover:shadow-lg transition-shadow">
+              <motion.div key={type.name} variants={fadeInUp} className="bg-card rounded-xl p-8 border border-border hover:shadow-lg transition-all hover:animate-pulse-slow">
                 <h3 className="font-heading text-2xl font-bold text-foreground mb-3">{type.name}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
@@ -197,8 +197,8 @@ const ASRSProduct = () => {
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {specs.map((spec) => (
-              <motion.div key={spec.label} variants={fadeInUp} className="flex items-start gap-3 bg-card rounded-lg p-4 border border-border">
-                <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+              <motion.div key={spec.label} variants={fadeInUp} className="flex items-start gap-3 bg-card rounded-lg p-4 border border-border hover:animate-pulse-slow transition-colors">
+                <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5 animate-pulse-slow" />
                 <div>
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">{spec.label}</p>
                   <p className="font-heading font-bold text-foreground">{spec.value}</p>
@@ -224,8 +224,8 @@ const ASRSProduct = () => {
               { step: "03", title: "Retrieval", desc: "When an order is placed, the system retrieves the item and delivers it to the pick station." },
               { step: "04", title: "Outbound", desc: "Items are conveyed to packing/shipping areas, with real-time inventory updates." },
             ].map((s) => (
-              <motion.div key={s.step} variants={fadeInUp} className="bg-navy-foreground/5 rounded-lg p-6 border border-navy-foreground/10">
-                <div className="font-heading text-4xl font-bold text-primary mb-3">{s.step}</div>
+              <motion.div key={s.step} variants={fadeInUp} className="bg-navy-foreground/5 rounded-lg p-6 border border-navy-foreground/10 hover:animate-glow transition-all">
+                <div className="font-heading text-4xl font-bold text-primary mb-3 animate-float-delayed">{s.step}</div>
                 <h3 className="font-heading text-lg font-bold text-navy-foreground mb-2">{s.title}</h3>
                 <p className="text-sm text-navy-foreground/70">{s.desc}</p>
               </motion.div>
@@ -245,10 +245,10 @@ const ASRSProduct = () => {
               Get a free consultation and discover how ASRS can save you 85% floor space while boosting throughput 3x.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
+              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10 hover:animate-glow">
                 <Link to="/contact">Get Free Consultation</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10">
+              <Button size="lg" variant="outline" asChild className="font-heading font-semibold uppercase tracking-wide border-primary-foreground/30 hover:text-primary-foreground/100 hover:bg-primary-foreground/10 hover:animate-glow">
                 <Link to="/products">View All Products</Link>
               </Button>
             </motion.div>

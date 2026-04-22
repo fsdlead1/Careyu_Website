@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ASRSProduct from "./pages/products/ASRSProduct";
 
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/asrs" element={<ASRSProduct />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/catalog/:categorySlug" element={<CategoryPage />} />
             <Route path="/catalog/:categorySlug/:subSlug" element={<SubProductPage />} />

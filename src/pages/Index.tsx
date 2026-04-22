@@ -16,6 +16,7 @@ import productRobotsImg from "@/assets/home/product-robots.jpg"
 import productPtlImg from "@/assets/home/product-ptl.jpg"
 import productConveyorImg from "@/assets/home/product-conveyor.jpg"
 import logo from "@/assets/logo.png";
+import Navbar from "@/components/Navbar";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const fadeInUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } };
@@ -72,7 +73,7 @@ const Index = () => {
       />
 
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
+      {/* <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
           <button onClick={() => scrollTo("home")} className="shrink-0">
             <img src={logo} alt="CareYu Automation Logo" className="h-10 md:h-14 w-auto" />
@@ -97,7 +98,8 @@ const Index = () => {
             </Button>
           </nav>
         </div>
-      </header>
+      </header> */}
+      <Navbar />
 
       {/* Hero */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-16">

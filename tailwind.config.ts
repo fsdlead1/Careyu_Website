@@ -93,12 +93,37 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.5)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 5px rgba(255, 255, 255, 0.4)" },
+          "50%": { boxShadow: "0 0 20px rgba(255, 255, 255, 0.8)", transform: "scale(1.02)" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "count-up": "count-up 0.5s ease-out forwards",
+        "float": "float 5s ease-in-out infinite",
+        "float-delayed": "float 5s ease-in-out infinite 2.5s",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "glow": "glow 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 8s ease infinite",
       },
     },
   },

@@ -69,7 +69,7 @@ const ProductDetail = () => {
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-navy-foreground/70 text-lg">{product.description}</motion.p>
             <motion.div variants={fadeInUp} className="mt-6">
-              <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide">
+              <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide shadow-lg animate-glow">
                 <Link to="/contact">Request Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </motion.div>
@@ -85,8 +85,8 @@ const ProductDetail = () => {
               <motion.h2 variants={fadeInUp} className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-6">Key Features</motion.h2>
               <motion.div variants={fadeInUp} className="space-y-3">
                 {product.features.map((f) => (
-                  <div key={f} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <div key={f} className="flex items-start gap-3 hover:bg-secondary/50 p-2 rounded-lg transition-colors group">
+                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5 animate-pulse-slow group-hover:scale-110 transition-transform" />
                     <span className="text-foreground">{f}</span>
                   </div>
                 ))}
@@ -112,11 +112,11 @@ const ProductDetail = () => {
       <section className="section-padding bg-secondary">
         <div className="container mx-auto text-center">
           {productImages[product.slug] ? (
-            <img src={productImages[product.slug]} alt={product.title} className="w-full max-w-3xl mx-auto h-[350px] object-cover rounded-xl mb-8" loading="lazy" />
+            <img src={productImages[product.slug]} alt={product.title} className="w-full max-w-3xl mx-auto h-[350px] object-cover rounded-xl mb-8 animate-float" loading="lazy" />
           ) : (
-            <Icon className="h-40 w-40 text-primary/15 mx-auto mb-8" />
+            <Icon className="h-40 w-40 text-primary/15 mx-auto mb-8 animate-float" />
           )}
-          <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide">
+          <Button size="lg" asChild className="font-heading font-semibold uppercase tracking-wide animate-glow">
             <Link to="/contact">Discuss Your Requirements <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
