@@ -84,7 +84,7 @@ const About = () => {
               </Button>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInRight}>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { num: "350+", label: "Happy Customers" },
                   { num: "500+", label: "Projects Delivered" },

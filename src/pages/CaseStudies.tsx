@@ -132,7 +132,7 @@ const CaseStudies = () => {
                 </motion.div>
 
                 {/* Results grid */}
-                <div className="grid grid-cols-2 gap-px bg-border">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
                   {cs.results.map((r) => (
                     <motion.div key={r.label} variants={fadeInUp} className="bg-card p-6 text-center">
                       <div className="font-heading text-3xl md:text-4xl font-bold text-primary">{r.metric}</div>

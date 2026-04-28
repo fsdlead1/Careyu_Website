@@ -166,7 +166,7 @@ const ASRSProduct = () => {
               <motion.div key={type.name} variants={fadeInUp} className="bg-card rounded-xl p-8 border border-border hover:shadow-lg transition-all hover:animate-pulse-slow">
                 <h3 className="font-heading text-2xl font-bold text-foreground mb-3">{type.name}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-border">
                   <div>
                     <p className="text-xs uppercase tracking-wide text-muted-foreground mb-1">Capacity</p>
                     <p className="text-sm font-semibold text-foreground">{type.capacity}</p>

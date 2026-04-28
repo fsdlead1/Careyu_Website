@@ -93,7 +93,7 @@ const Products = () => {
                   </div>
                   <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight">{product.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
-                  <div className="grid grid-cols-2 gap-2 mb-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                     {product.features.slice(0, 6).map((f) => (
                       <p key={f} className="text-sm text-foreground flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" /> {f}
