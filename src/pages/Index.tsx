@@ -92,7 +92,7 @@ const Index = () => {
             <Link to="/careers" className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Careers</Link>
             <Link to="/case-studies" className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Case Studies</Link>
             <Button size="sm" asChild>
-              <a href="tel:+919941014234" className="gap-2">
+              <a href="tel:+918925940389" className="gap-2">
                 <Phone className="h-4 w-4" /> Call Us
               </a>
             </Button>
@@ -278,7 +278,7 @@ const Index = () => {
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
             {[
-              { icon: Phone, label: "Call Us", value: "+91-9941014234", href: "tel:+919941014234" },
+              { icon: Phone, label: "Call Us", value: "+91-8925940389", href: "tel:+918925940389" },
               { icon: Mail, label: "Email", value: "projects@careyu.ai", href: "mailto:projects@careyu.ai" },
               { icon: MapPin, label: "Visit Us", value: "28/2, 2nd Main Rd, Mogappair, Chennai - 600050", href: undefined },
             ].map((item) => (
@@ -311,7 +311,7 @@ const Index = () => {
         "@context": "https://schema.org", "@type": "Organization", name: "CareYu Automation",
         url: "https://careyuautomation.com", description: "Industrial automation company specializing in ASRS and storage automation solutions.",
         address: { "@type": "PostalAddress", streetAddress: "28/2, 2nd Main Road, Olympic Colony, Mogappair", addressLocality: "Chennai", postalCode: "600050", addressCountry: "IN" },
-        telephone: "+91-9941014234", email: "bernardpious@careyuautomation.com",
+        telephone: "+91-8925940389", email: "bernardpious@careyuautomation.com",
       }) }} />
     </div>
   );

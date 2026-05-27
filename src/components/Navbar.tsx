@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link to="/careers" className="font-heading text-base lg:text-lg font-bold uppercase tracking-wide text-foreground hover:text-primary transition-colors hover:animate-glow">Careers</Link>
             <Link to="/case-studies" className="font-heading text-base lg:text-lg font-bold uppercase tracking-wide text-foreground hover:text-primary transition-colors hover:animate-glow">Case Studies</Link>
             <Button size="lg" className="font-heading text-base uppercase tracking-wide font-bold animate-glow" asChild>
-              <a href="tel:+919941014234" className="gap-2">
+              <a href="tel:+918925940389" className="gap-2">
                 <Phone className="h-5 w-5" /> Call Us
               </a>
             </Button>
@@ -80,7 +80,7 @@ const Navbar = () => {
                   <Link to="/case-studies" className="font-heading text-lg font-bold uppercase tracking-wide text-foreground hover:text-primary transition-colors">Case Studies</Link>
                 </SheetClose>
                 <Button size="lg" className="font-heading text-base uppercase tracking-wide font-bold mt-4" asChild>
-                  <a href="tel:+919941014234" className="gap-2">
+                  <a href="tel:+918925940389" className="gap-2">
                     <Phone className="h-5 w-5" /> Call Us
                   </a>
                 </Button>

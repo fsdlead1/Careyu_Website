@@ -32,7 +32,7 @@ const Contact = () => {
     <Layout>
       <SEOHead
         title="Contact CareYu Automation | Get a Free Consultation"
-        description="Contact CareYu Automation for ASRS, storage automation, and warehouse solutions. Call +91-9941014234 or email us. Located in Chennai, India."
+        description="Contact CareYu Automation for ASRS, storage automation, and warehouse solutions. Call +91-8925940389 or email us. Located in Chennai, India."
         keywords="contact CareYu, automation consultation, warehouse automation quote, ASRS inquiry, Chennai automation company"
         canonical="https://careyuautomation.com/contact"
       />
@@ -63,7 +63,7 @@ const Contact = () => {
               </motion.h2>
 
               {[
-                { icon: Phone, label: "Phone", value: "+91-9941014234", href: "tel:+919941014234" },
+                { icon: Phone, label: "Phone", value: "+91-8925940389", href: "tel:+918925940389" },
                 { icon: Mail, label: "Email", value: "bernardpious@careyuautomation.com", href: "mailto:bernardpious@careyuautomation.com" },
                 { icon: MapPin, label: "Address", value: "28/2, 2nd Main Road, Olympic Colony, Mogappair, Chennai - 600050", href: undefined },
               ].map((item) => (
@@ -160,7 +160,7 @@ const Contact = () => {
             mainEntity: {
               "@type": "Organization",
               name: "CareYu Automation",
-              telephone: "+91-9941014234",
+              telephone: "+91-8925940389",
               email: "bernardpious@careyuautomation.com",
               address: {
                 "@type": "PostalAddress",
