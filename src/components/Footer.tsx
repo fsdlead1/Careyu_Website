@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2 space-y-4">
-            <img src={logo} alt="CareYu Automation" className="h-12 w-auto brightness-0 invert" />
+            <img src={logo} alt="CareYu Automation" className="h-12 w-auto" />
             <p className="text-sm text-navy-foreground/70 leading-relaxed">
               Precision and Performance through Automation. Transforming storage systems with pioneering automation solutions.
             </p>
